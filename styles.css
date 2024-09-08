@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.container-md {
+    padding: 12px;
+    text-align: center;
+}
+
+.flashcard {
+    height: 220px;
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #0000001a;
+}
+
+.question {
+    font-size: 36px;
+}
+
+.answer,
+.pinyin {
+    font-size: 24px;
+    color: #737373;
+}
+
+.hidden {
+    display: none;
+}
+
+.controls {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#add-card-form {
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    background-color: #4f6dff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5b4fff;
+}
+
+@media screen and (max-width: 600px) {
+    #add-card-form {
+        flex-wrap: wrap;
+    }
+
+
+    #add-card-form div {
+        width: 100%;
+    }
+
+    .question {
+        font-size: 24px;
+    }
+}
