@@ -26,6 +26,7 @@ function updateFlashcard() {
     answerDiv.textContent = card.answer;
     answerDiv.classList.add('hidden');
     pinyinDiv.classList.add('hidden');
+    flipBtn.innerHTML = `<ion-icon name="eye-outline"></ion-icon>`;
     updateCountDisplay();
 }
 
@@ -33,6 +34,11 @@ function updateFlashcard() {
 flipBtn.addEventListener('click', () => {
     answerDiv.classList.toggle('hidden');
     pinyinDiv.classList.toggle('hidden');
+    if (answerDiv.classList.contains('hidden') && pinyinDiv.classList.contains('hidden')) {
+        flipBtn.innerHTML = `<ion-icon name="eye-outline"></ion-icon>`;
+    } else {
+        flipBtn.innerHTML = `<ion-icon name="eye-off-outline"></ion-icon>`;
+    }
 });
 
 // event listeners for navigation buttons
@@ -70,5 +76,7 @@ addCardForm.addEventListener('submit', (event) => {
 
     }
 })
+
+
 
 questionDiv.textContent = "Add your first flashcard!";
